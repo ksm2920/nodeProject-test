@@ -1,0 +1,31 @@
+<% if (cartItem.length == 0 ) { %>
+    <div> Your shopping cart is empty</div>
+<% } %>
+
+<% cartItem.forEach( item => { %>
+    <div><%= item.name %>
+        <%= item.price %>
+        <button> + </button>
+        <button> - </button>
+
+        <span>Total price: </span>
+    </div>
+    =======================
+    <% }) %>
+    
+    
+    <button type="submit" class="checkout">Buy</button>
+    
+    
+    
+    <script src="https://js.stripe.com/v3/"></script>
+    
+    <script>
+        
+        var stripe = Stripe('pk_test_51ILli2IBgzkVX423iQG53cRphwnCPJ4HDXdqsxSGRvYEsN9pd5jUfi0MUQQC9IBRCwFHHiDfVpICKkyfZcyBX0ji007eN2MdMR');
+        
+        document.querySelector(".checkout").addEventListener("click", () => {
+            
+            stripe.redirectToCheckout({ sessionId: "<%=sessionId %>" });
+        })
+    </script>

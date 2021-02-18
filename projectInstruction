@@ -1,0 +1,116 @@
+An app that instructor ka sale courses to stuents
+entity/huvud aktorer/ huvud ovject i appen? /model.data sparas in i databasen
+
+Model achitecture/design:
+- Students: vad ska vi spara om students
+- Teachers: 
+
+    user: name, email, password, role: teacher
+
+- Courses
+
+
+----------
+
+Routes:
+/register,
+/login, (signInRoute)
+
+/resetPassword,
+/resetPassword/:token,(resetRoute)
+/resetForm, 
+/instructor,  
+/student,
+
+=== userRoute
+  
+
+/,
+/course,
+/course/:id
+
+=== courseRoute
+
+
+views:
+register.ejs,
+login,ejs,
+resetPassword,ejs,
+resetForm.ejs,
+courses.ejs,
+error.ejs
+
+
+
+
+MVC:- projectmapp/filer design.
+
+whole app architecture:
+
+
+
+
+
+
+NoSQL 
+Entity relation: 
+One to on relation: a person can have a IDkort
+
+One to many relation: a school can have many Students
+
+many to many relation: Teachers can have many students, students can have many teachers
+
+
+** JWT, Cookie, andra alternative
+
+** go through gammal kodbasen
+
+** reset password, mail service in i register
+
+** Teacher: - skapa kurser
+
+** authorization
+
+//fixa profile, menu
+// try catch, visa error meddelande
+
+// 1. controller -> 2. renderar ejs template med data . -> route -> 4. index.js)
+
+
+// Teacher verify delen : verifyInstructor
+// CRUD
+// user Read: visa kuserna
+// user ska kunna put kurser i cart
+// relationer mellan modellerna
+// egna metoder to hantera anpassad business logik
+
+Instructor -> som skapa och se egna kurser
+
+    Instructor -> user -> kursLista 
+    User -> se alla kurserna -> shoppingList
+
+// Normalisation
+course - instructor - user courseOrder( course, user, instructor)
+
+denormalised
+// course, user en till lista av kurser// i user lagrade vi kursId som referens
+// i user lagrade vi kursId som referens
+// populate to extract data which belong to kursId
+
+
+// payment service 
+// heroku
+
+** Logout ska synas i menubar
+** add course
+** Profile sidan : showmycourses
+** add to cart menyn
+** Checkout 
+** showmycourses
+** add checkout i add to cart route
+
+// Client server separat architecture
+// API gateway
+// Strapi cms, cms
+
+
